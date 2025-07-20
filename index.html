@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>heejuIm</title>
-  <script src="https://unpkg.com/webamp"></script>
   <style>
     body {
       background-color: #ffffff;
@@ -13,6 +12,7 @@
       margin-top: 20px;
     }
   </style>
+  <!-- ✅ Webamp 라이브러리를 HEAD 안에 두지 마세요 -->
 </head>
 <body>
 
@@ -37,9 +37,13 @@ Hee Ju Im 임희주
 <a href="4.html">contact</a>
 <br>
 
-<!-- Webamp 플레이어 -->
+<!-- Webamp 플레이어가 들어갈 자리 -->
 <div id="app"></div>
 
+<!-- ✅ Webamp 라이브러리 불러오기 -->
+<script src="https://unpkg.com/webamp"></script>
+
+<!-- ✅ Webamp가 정의된 뒤 실행해야 함 -->
 <script>
   const webamp = new Webamp({
     initialTracks: [
@@ -48,7 +52,8 @@ Hee Ju Im 임희주
           artist: "Vegetable Wife",
           title: "Airholes"
         },
-url: "https://raw.githubusercontent.com/meek-as-a-lamb/imheeju/main/Airholes-VegetableWife.mp3"      }
+        url: "https://file.2bpencil.online/files/sound/files/Airholes-VegetableWife.mp3"
+      }
     ],
     initialSkin: {
       url: "https://webamp.org/skins/TopazAmp1-2.wsz"
