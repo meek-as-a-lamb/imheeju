@@ -12,7 +12,6 @@
       margin-top: 20px;
     }
   </style>
-  <!-- ✅ Webamp 라이브러리를 HEAD 안에 두지 마세요 -->
 </head>
 <body>
 
@@ -37,13 +36,12 @@ Hee Ju Im 임희주
 <a href="4.html">contact</a>
 <br>
 
-<!-- Webamp 플레이어가 들어갈 자리 -->
+<!-- Webamp 플레이어 삽입 -->
 <div id="app"></div>
 
-<!-- ✅ Webamp 라이브러리 불러오기 -->
-<script src="https://unpkg.com/webamp"></script>
+<!-- ✅ Webamp 구버전 UMD 빌드 사용 -->
+<script src="https://unpkg.com/webamp@1.4.0/built/webamp.min.js"></script>
 
-<!-- ✅ Webamp가 정의된 뒤 실행해야 함 -->
 <script>
   const webamp = new Webamp({
     initialTracks: [
